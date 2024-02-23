@@ -1,14 +1,13 @@
-import { ChainId, JSBI, Percent, Token, WDEV } from 'moonbeamswap'
+import { ChainId, JSBI, Percent, Token, WDEV } from 'artswap'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { routerv2 } from '../moonbase_address.json'
 
 import { injected, walletconnect } from '../connectors'
 //fortmatic, portis, walletconnect, walletlink, lattice
 export const ROUTER_ADDRESS: { [key: string]: string } = {
-  [ChainId.STANDALONE]: '0x42e2EE7Ba8975c473157634Ac2AF4098190fc741',
-  [ChainId.MOONROCK]: routerv2,
-  [ChainId.MOONBASE]: routerv2,
-  [ChainId.MOONSHADOW]: routerv2,
+  [ChainId.ARTELALOCAL]: '0x42e2EE7Ba8975c473157634Ac2AF4098190fc741',
+  [ChainId.ARTELADEVNET]: routerv2,
+  [ChainId.ARTELATESTNET]: routerv2,
 }
 
 // a list of tokens by chain
@@ -37,14 +36,22 @@ export const CRV = new Token(
   'CRV',
   'Curve Dao Token'
 )
+
+export const DEMO = new Token(
+  ChainId.ARTELATESTNET,
+  '0x058dDd9339F3cecDb7662e2130Bd1cB1f03672D2',
+  18,
+  'MTK',
+  'My Token'
+)
+
 export const ALPHA = new Token(ChainId.MAINNET, '0xa1faa113cbE53436Df28FF0aEe54275c13B40975', 18, 'ALPHA', 'AlphaToken')
 
 const WDEV_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WDEV[ChainId.MAINNET]],
-  [ChainId.STANDALONE]: [WDEV[ChainId.STANDALONE]],
-  [ChainId.MOONROCK]: [WDEV[ChainId.MOONROCK]],
-  [ChainId.MOONBASE]: [WDEV[ChainId.MOONBASE]],
-  [ChainId.MOONSHADOW]: [WDEV[ChainId.MOONSHADOW]],
+  [ChainId.ARTELATESTNET]: [WDEV[ChainId.ARTELATESTNET]],
+  [ChainId.ARTELADEVNET]: [WDEV[ChainId.ARTELADEVNET]],
+  [ChainId.ARTELALOCAL]: [WDEV[ChainId.ARTELALOCAL]],
 }
 
 // used to construct intermediary pairs for trading

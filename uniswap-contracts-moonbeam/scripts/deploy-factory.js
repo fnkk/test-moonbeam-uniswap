@@ -7,7 +7,7 @@ async function deploy() {
    console.log(`Deploying contracts using ${deployerAddress}`);
 
    //Deploy WETH
-   const weth = await ethers.getContractFactory('WETH');
+   const weth = await ethers.getContractFactory('WART');
    const wethInstance = await weth.deploy();
    await wethInstance.deployed();
 

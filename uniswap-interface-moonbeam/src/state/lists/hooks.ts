@@ -1,4 +1,4 @@
-import { ChainId, Token } from 'moonbeamswap'
+import { ChainId, Token } from 'artswap'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
@@ -32,10 +32,23 @@ export type TokenAddressMap = Readonly<{ [chainId in ChainId]: Readonly<{ [token
  */
 const EMPTY_LIST: TokenAddressMap = {
   [ChainId.MAINNET]: {},
-  [ChainId.STANDALONE]: {},
-  [ChainId.MOONROCK]: {},
-  [ChainId.MOONBASE]: {},
-  [ChainId.MOONSHADOW]: {}
+  [ChainId.ARTELATESTNET]: {
+    '0x058dDd9339F3cecDb7662e2130Bd1cB1f03672D2': new WrappedTokenInfo(
+      {
+        address: '0x058dDd9339F3cecDb7662e2130Bd1cB1f03672D2',
+        chainId: 11822,
+        decimals: 18,
+        extensions: {},
+        logoURI: '',
+        name: 'My Token',
+        symbol: 'MTK',
+        tags: []
+      },
+      []
+    )
+  },
+  [ChainId.ARTELALOCAL]: {},
+  [ChainId.ARTELADEVNET]: {},
 }
 
 const listCache: WeakMap<TokenList, TokenAddressMap> | null =

@@ -1,11 +1,11 @@
-import { ChainId } from 'moonbeamswap'
+import { ChainId } from 'artswap'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/images/mainlogo.png'
+// import Logo from '../../assets/images/mainlogo.png'
 import { useActiveWeb3React } from '../../hooks'
 //import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
@@ -114,10 +114,9 @@ const BalanceText = styled(Text)`
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
-  [ChainId.STANDALONE]: 'Moonbeam Development',
-  [ChainId.MOONROCK]: 'Moonrock Rococo',
-  [ChainId.MOONBASE]: 'Moonbase Alpha',
-  [ChainId.MOONSHADOW]: 'Moonshadow Westend',
+  [ChainId.ARTELATESTNET]: 'Artela Testnet',
+  [ChainId.ARTELALOCAL]: 'Artela Local',
+  [ChainId.ARTELADEVNET]: 'Artela Devnet',
 }
 
 export default function Header() {
@@ -132,7 +131,7 @@ export default function Header() {
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img style={{ height: 50 }} src={Logo} alt="logo" />
+              {/*<img style={{ height: 50 }} src={Logo} alt="logo" />*/}
             </UniIcon>
           </Title>
         </HeaderElement>
@@ -144,7 +143,7 @@ export default function Header() {
             <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
               {account && userEthBalance ? (
                 <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} DEV
+                  {userEthBalance?.toSignificant(4)} ART
                 </BalanceText>
               ) : null}
               <Web3Status />

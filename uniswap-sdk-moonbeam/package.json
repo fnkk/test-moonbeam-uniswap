@@ -1,8 +1,8 @@
 {
-  "name": "moonbeamswap",
+  "name": "artswap",
   "license": "MIT",
-  "version": "1.0.4",
-  "description": "🛠 An example SDK for building applications on top of Uniswap in Moonbeam.",
+  "version": "1.0.6",
+  "description": "🛠 An example SDK for building applications on top of Uniswap in Artela.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [

@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts'
-import { ChainId, WDEV } from 'moonbeamswap'
+import { ChainId, WDEV } from 'artswap'
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import { useMemo } from 'react'
 import ENS_ABI from '../constants/abis/ens-registrar.json'
@@ -49,9 +49,9 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
       case ChainId.MAINNET:
         address = '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
         break
-      case ChainId.STANDALONE:
+      case ChainId.ARTELATESTNET:
         break
-      case ChainId.MOONBASE:
+      case ChainId.ARTELADEVNET:
         break
     }
   }

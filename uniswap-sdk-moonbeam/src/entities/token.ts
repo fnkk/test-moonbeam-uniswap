@@ -65,14 +65,7 @@ export const WDEV = {
     'WETH',
     'Wrapped Ether'
   ),
-  [ChainId.STANDALONE]: new Token(
-    ChainId.STANDALONE,
-    '0xC2Bf5F29a4384b1aB0C063e1c666f02121B6084a',
-    18,
-    'WDEV',
-    'Wrapped Dev'
-  ),
-  [ChainId.MOONROCK]: new Token(ChainId.MOONROCK, WETH, 18, 'WDEV', 'Wrapped Dev'),
-  [ChainId.MOONBASE]: new Token(ChainId.MOONBASE, WETH, 18, 'WDEV', 'Wrapped Dev'),
-  [ChainId.MOONSHADOW]: new Token(ChainId.MOONSHADOW, WETH, 18, 'WDEV', 'Wrapped Dev')
+  [ChainId.ARTELALOCAL]: new Token(ChainId.ARTELALOCAL, WETH, 18, 'WART', 'Wrapped ART'),
+  [ChainId.ARTELADEVNET]: new Token(ChainId.ARTELADEVNET, WETH, 18, 'WART', 'Wrapped ART'),
+  [ChainId.ARTELATESTNET]: new Token(ChainId.ARTELATESTNET, WETH, 18, 'WART', 'Wrapped ART'),
 }

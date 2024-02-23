@@ -17,10 +17,15 @@ module.exports = {
   networks: {
     hardhat: {},
 
-    moonbase: {
-      url: 'https://rpc.api.moonbase.moonbeam.network',
-      accounts: [privateKey],
-      chainId: 1287,
+    // moonbase: {
+    //   url: 'https://rpc.api.moonbase.moonbeam.network',
+    //   accounts: [privateKey],
+    //   chainId: 1287,
+    // },
+    test: {
+      url: 'https://betanet-rpc1.artela.network',
+      accounts: [privateKeyDev],
+      chainId: 11822,
     },
     dev: {
       url: 'http://127.0.0.1:9933',
